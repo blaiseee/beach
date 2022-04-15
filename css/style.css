@@ -1,0 +1,679 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import "pagestyle.css";
+@import "otherstyle.css";
+
+*
+{
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	border: 0;
+	box-sizing: border-box;
+}
+
+html
+{
+	line-height: 1;
+}
+
+body
+{
+	color: #000;
+	background: none transparent;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 0.075em;
+	user-select: none;
+	text-size-adjust: 100%;
+	font-feature-settings: "palt";
+}
+
+html, body
+{
+	height: 100%;
+}
+
+header
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 10%;
+}
+
+header, article, nav, figure
+{
+	display: block;
+}
+
+a:link
+{
+	color: #888;
+	text-decoration: none;
+}
+
+a:visited
+{
+	color: #888;
+}
+
+a:hover
+{
+	opacity: 0.8;
+	text-decoration: none;
+}
+
+img
+{
+	vertical-align: bottom;
+	backface-visibility: hidden;
+}
+
+a img
+{
+	border: none;
+}
+
+button
+{
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	width: 100%;
+	padding: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+ol, ul
+{
+	list-style: none;
+}
+
+@media all and (min-width: 720px)
+{
+	header 
+	{
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 30px;
+		z-index: 101;
+	}
+
+	header .blaiseflorendologo
+	{
+		position: absolute;
+		right: 75px;
+		top: 50%;
+		width: 78px;
+		margin: 2px 20px 0 0;
+		transform: translateY(-50%);
+		pointer-events: auto;
+		opacity: 1;
+		transition: opacity 0.3s;
+	}
+
+	header .blaiseflorendologo a
+	{
+		color: #000;
+	}
+
+	header .blaiseflorendologo:hover
+	{
+		opacity: 0.5;
+	}
+
+	.intro_body
+	{
+		position: relative;
+		width: 100%;
+	}
+}
+
+@media all and (min-width: 720px)
+{
+	.background
+	{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+	}
+
+	.background header
+	{
+		opacity: 0;
+	}
+
+	.background-start header
+	{
+		opacity: 1;
+		transition: all 0.5s;
+	}
+
+	.background .intro
+	{
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		text-align: center;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+
+	.background .intro .intro_text
+	{
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		text-align: center;
+		transform: translateY(250%);
+	}
+	.background .intro-ended
+	{
+		opacity: 0;
+		transition: all 0.5s;
+	}
+
+	.nav_menu
+	{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 60px;
+		pointer-events: none;
+		-webkit-transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+		-o-transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+		transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	}
+
+	.nav_menu > .nav_list
+	{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-150%);
+	}
+
+	.nav_menu > .nav_list > li
+	{
+		float: left;
+		font-size: 13px;
+		font-weight: 500;
+		pointer-events: auto;
+		opacity: 1;
+		-webkit-transition: opacity 0.3s;
+		-o-transition: opacity 0.3;
+		transition: opacity 0.3s;
+	}
+
+	.nav_menu > .nav_list > li:hover
+	{
+		opacity: 0.5;
+	}
+
+	.nav_menu > .nav_list > li:nth-of-type(n+2)
+	{
+		margin-left: 30px;
+	}
+
+	.nav_menu > .nav_list > li button
+	{
+		color: #ccc;
+	}
+
+	.nav_menu > .nav_list > li > button.open
+	{
+		color: #000;
+	}
+
+	ul.nav_list
+	{
+		list-style: none;
+		display: block;
+		margin-block-start: 1em;
+		margin-block-end: 1em;
+		margin-inline-start: 0px;
+		margin-inline-end: 0px;
+		padding-inline-start: 40px;
+	}
+
+	.background .inner
+	{
+		/*display: none;*/
+		/* display: block; */
+		position: relative;
+		width: 100%;
+	}
+
+	.background .inner .picList
+	{
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: calc(100% - 60px * 2);
+		margin-top: 60px;
+		opacity: 0;
+	}
+
+	.background-start .inner .picList
+	{
+		opacity: 1;
+		transition: all 0.5s;
+	}
+
+	.background .inner .picList > li 
+	{
+		display: none;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		/* opacity: 0; */
+		/* transition: all 0.5s; */
+	}
+
+	.background .inner .picList > li.active
+	{
+		display: block;
+		/* opacity: 1;
+		transition: all 0.5s; */
+	}
+
+	.background .inner .picList > li figure
+	{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 100%;
+		height: 100%;
+		transform: translateX(-50%) translateY(-50%);
+		opacity: 1;
+		transition: opacity 0.5s;
+	}
+
+	.background .inner .picList > li figure.fig
+	{
+		width: auto;
+		height: 100%;
+	}
+
+	.background .inner .picList > li figure.fig img
+	{
+		width: auto;
+		max-width: auto;
+		height: 100%;
+		max-height: 100%;
+	}
+
+	.background .inner .picList > li figure:hover
+	{
+		opacity: 0.8;
+	}
+
+	.background .inner .picList > li figure img
+	{
+		width: auto;
+		max-width: auto;
+		height: 100%;
+		max-height: 100%;
+	}
+
+	.background .inner .picList > li figure .picture
+	{
+		position: relative;
+		height: 100%;
+	}
+
+	.background .inner .picList > li figure figcaption
+	{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 60px;
+		margin-bottom: -60px;
+	}
+
+	.background .inner .picList > li figure figcaption > div
+	{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		padding-right: 8px;
+		transform: translateY(-50%);
+		font-size: 12px;
+		font-size: 1.2rem;
+		color: #000;
+		font-weight: 500;
+		letter-spacing: 0.15em;
+	}
+}
+
+/*Menu Button*/
+@media all and (min-width: 720px)
+{
+	.menu-btn
+	{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 26px;
+		height: 11px;
+		cursor: pointer;
+		margin: 23px 0 0 20px;
+		transition: all 0.5s ease-in-out;
+		z-index: 10000;
+	}
+
+	.menu-btn_burger
+	{
+		position: relative;
+		height: 100%;
+		width: 100%;
+		transition: all 0.5s ease-in-out;
+	}
+
+	.menu-btn_burger::before,
+	.menu-btn_burger::after
+	{
+		content: '';
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background: #000;
+		transform-origin: 50% 50%;
+		transition: all	0.25s ease-in-out;
+	}
+
+	.menu-btn .menu-btn_burger::before
+	{
+		top: 0;
+	}
+
+	.menu-btn .menu-btn_burger::after
+	{
+		bottom: 0;
+	}
+
+	.menu-btn:hover .menu-btn_burger::before
+	{
+		transform: translateY(-1px);
+	}
+
+	.menu-btn:hover .menu-btn_burger::after
+	{
+		transform: translateY(1px);
+	}
+
+	.menu-btn.open
+	{
+		opacity: 1;
+		transition: opacity 0.3s;
+	}
+
+	.menu-btn.open:hover
+	{
+		opacity: 0.5;
+	}
+
+	.menu-btn.open .menu-btn_burger:before,
+	.menu-btn.open .menu-btn_burger:after
+	{
+		top: 50%;
+		background: #fff;
+	}
+
+	.menu-btn.open .menu-btn_burger::before
+	{
+		transform: rotate(45deg)
+	}
+
+	.menu-btn.open .menu-btn_burger::after
+	{
+		transform: rotate(-45deg)
+	}
+}
+
+
+/*Overlay*/
+@media all and (min-width: 720px) 
+{
+	.nav
+	{
+		position: fixed;
+		display: flex;
+		align-items: center;
+		background-color: rgba(0, 0, 0, 0.75);
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		transition: all 0.3s ease;
+		opacity: 0;
+		z-index: -1;
+	}
+
+	.nav.open
+	{
+		opacity: 1;
+		z-index: 100;
+	}
+
+	.nav .overlay 
+	{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 550px;
+		transform: translateX(-50%) translateY(-50%);
+		
+	}
+
+	.nav .overlay .menuList dt
+	{
+		font-size: 12px;
+		/* font-size: 1.2rem; */
+		color: #999;
+		letter-spacing: 0.25em;
+	}
+
+	.nav .overlay .menuList dd
+	{
+		position: relative;
+	}
+
+	.nav .overlay .menuList dd a
+	{
+		color:#fff;
+		opacity: 1;
+		transition: opacity 0.3s;
+	}
+
+	.nav .overlay .menuList dd a:hover
+	{
+		opacity: 0.5;
+	}
+
+	.nav .overlay .partsMenu
+	{
+		position: relative;
+		float: left;
+	}
+
+	.nav .overlay .partsMenu .part dd
+	{
+		font-size: 16px;
+		letter-spacing: 0.15em;
+		line-height: 3.5;
+	}
+
+	.nav .overlay .partsMenu .part dd:nth-of-type(1)
+	{
+		margin-top: 8.5px;
+	}
+
+	.nav .overlay .mainMenu
+	{
+		position: relative;
+		float: right;
+	}
+
+	.nav .overlay .mainMenu .product dd
+	{
+		font-size: 16px;
+		letter-spacing: 0.2em;
+		margin-top: 2px;
+	}
+
+	.nav .overlay .mainMenu .product dd:nth-of-type(1)
+	{
+		margin-top: 25px;
+	}
+
+	.nav .overlay .mainMenu .other dt
+	{
+		position: absolute;
+		clip: rect(1px, 1px, 1px, 1px);
+		width: 1px;
+		height: 1px;
+	}
+
+	.nav .overlay .mainMenu .other dd
+	{
+		font-size: 16px;
+		letter-spacing: 0.2em;
+		line-height: 3;
+	}
+
+	.nav .overlay .mainMenu .other dd:nth-of-type(n+3)
+	{
+		font-size: 16px;
+		letter-spacing: 0.2em;
+		line-height: 3;
+	}
+
+	.nav .overlay .mainMenu .other dd:nth-of-type(1)::before,
+	.nav .overlay .mainMenu .other dd:nth-of-type(3)::before,
+	.nav .overlay .mainMenu .other dd:nth-of-type(5)::before
+	{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin-top: -22px;
+		width: 12px;
+		height: 1px;
+		background-color: #fff;
+	}
+
+	.nav .overlay .mainMenu .other dd:nth-of-type(1)
+	{
+		margin-top: 50px;
+	}
+
+	.nav .overlay .mainMenu .other dd:nth-of-type(3)
+	{
+		margin-top: 40px;
+	}
+
+	.nav .overlay .mainMenu .other dd:nth-of-type(5)
+	{
+		margin-top: 40px;
+	}
+
+	.nav .overlay .mainMenu .other dd:nth-of-type(6)
+	{
+		width: 14px;
+	}
+
+	.nav .overlay .mainMenu .copyright
+	{
+		margin-top: 25px;
+		font-size: 12px;
+		color: rgb(179, 179, 179);
+		letter-spacing: 0.15em;
+	}
+	
+	/* .overlay ul.overlay_parts
+	{
+		position: absolute;
+		top: 50%;
+		left: 35%;
+		transform: translate(-50%, -50%);
+		list-style: none;
+	}
+	
+	.overlay ul.overlay_products
+	{
+		position: absolute;
+		top: 50%;
+		left: 60%;
+		transform: translate(-50%, -50%);
+		list-style: none;
+	}
+	
+	.overlay ul li
+	{
+		margin: 20px;
+	}
+	
+	.overlay a
+	{
+		color: whitesmoke;	
+		text-decoration: none;
+	}
+	
+	.overlay li
+	{
+		color: whitesmoke;
+		font-size: 30px;
+		
+	} */
+}
+
+/*Animation*/
+@keyframes fadeIn
+{
+	to
+	{
+		opacity: 1;
+	}
+}
+
+.fade-in-top
+{
+	/*position: relative;*/
+	opacity: 0;
+	animation: fadeIn 0.5s ease-in forwards;
+	animation-delay: 1s;
+	line-height: 3vh;
+	font-size: 14px;
+}
+
+.fade-in-middle
+{
+	position: relative;
+	top: 100px;
+	opacity: 0;
+	animation: fadeIn 0.5s ease-in forwards;
+	animation-delay: 1.75s;
+	font-size: 18px;
+}
+
+.fade-in-bottom
+{
+	position: relative;
+	top: 200px;
+	opacity: 0;
+	animation: fadeIn 0.5s ease-in forwards;
+	animation-delay: 2.5s;
+	font-size: 14px;
+}
+

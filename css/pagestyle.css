@@ -1,0 +1,351 @@
+/* Navigation */
+@media all and (min-width: 720px)
+{
+    .partsBG .menu-btn_burger::before,
+    .partsBG .menu-btn_burger::after
+    {
+        content: '';
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background: #fff;
+		transform-origin: 50% 50%;
+		transition: all	0.25s ease-in-out;
+    }
+
+    .partsBG .navBar_inner
+    {
+        width: 100%;
+    }
+
+    .partsBG .navBar_inner > .navBarList
+    {
+        position: absolute;
+        top: 50%;
+        width: 50%;
+        transform: translateX(50%) translateY(300%);
+        text-align: center;
+        z-index: 101;
+    }
+
+    .partsBG .navBar_inner > .navBarList > li
+    {
+        display: inline-block;
+        position: relative;
+        font-size: 12px;
+        pointer-events: auto;
+        font-weight: 400;
+    }
+
+    .partsBG .navBar_inner > .navBarList > li a
+    {
+        display: block;
+        width: 10px;
+        color: #fff;
+        text-align: center;
+        opacity: 1;
+        transition: opacity 0.3s;
+    }
+
+    .partsBG .navBar_inner > .navBarList > li a:hover
+    {
+        opacity: 0.5;
+    }
+
+    .partsBG .header_navBar
+    {
+        position: relative;
+        width: 100%;
+    }
+
+    .partsBG .header_navBar .header_navBar_inner
+    {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 60px;
+    }
+
+    .partsBG .header_navBar .header_navBar_inner > .navBarList > li:nth-of-type(n+2)
+    {
+        margin-left: 20px;
+    }
+
+}
+
+/* Header */
+@media all and (min-width: 720px)
+{
+    .partsBG .blaiseflorendologo a
+	{
+		color: #fff;
+	}
+
+    .partsBG .header_fig
+    {
+        position: relative;
+        width: 100%;
+        margin-top: -60px;
+        /* z-index: -1; */
+    }
+
+    .partsBG .header_fig > .header_fig_inner
+    {
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        background: url(images/wp3431435.jpg) 0 0 no-repeat;
+    }
+
+    .partsBG .header_fig .header_fig_actual
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .partsBG .header_fig .header_fig_actual > img
+    {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .partsBG .header_fig .header_fig_actual > img.pic1
+    {
+        position: relative;
+        top: -650px;
+    }
+
+    .partsBG .header_fig .header_fig_actual > img.pic3
+    {
+        position: relative;
+        top: -525px;
+    }
+
+    .partsBG .header_fig .header_fig_actual > img.pic4
+    {
+        position: relative;
+        top: -50px;
+    }
+
+    .partsBG .header_fig .header_fig_actual > img.pic5
+    {
+        position: relative;
+        top: -700px;
+    }
+
+    .partsBG .header_fig .header_fig_actual > img.pic6
+    {
+        position: relative;
+        top: -600px;
+    }
+
+    .partsBG .header_fig .header_fig_actual > img.pic7
+    {
+        position: relative;
+        top: -300px;
+    }
+
+    .partsBG .header_fig .header_fig_actual > img.pic8
+    {
+        position: relative;
+        top: -500px;
+    }
+
+    .partsBG .header_fig .header_fig_actual > img.pic9
+    {
+        position: relative;
+        top: -445px;
+    }
+
+    .partsBG .header_fig .header_fig_actual > img.pic10
+    {
+        position: relative;
+        top: -325px;
+    }
+
+    .partsBG .header_fig .header_fig_title
+    {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-left: 90px;
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 0.15em;
+        line-height: 2.625;
+        transform: translateY(-10%);
+        color: #fff;
+    }
+
+    .partsBG .header_fig .header_fig_nav
+    {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        height: 12px;
+        width: 70px;
+        margin-right: 70px;
+        transform: translateY(-100%);
+    }
+
+    .partsBG .header_fig .header_fig_nav > li
+    {
+        position: absolute;
+        top: 0;
+        height: 12px;
+        width: 6px;
+    }
+
+    .partsBG .header_fig .header_fig_nav > li > a
+    {
+        display: block;
+        height: 100%;
+        width: 100%;
+        opacity: 1;
+        transition: opacity 0.3s;
+        color: #fff;
+    }
+
+    .partsBG .header_fig .header_fig_nav > li > a:hover
+    {
+        opacity: 0.5;
+    }
+
+    .partsBG .header_fig .header_fig_nav > li > a::before
+    {
+        content: '';
+        display: block;
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+
+    .partsBG .header_fig .header_fig_nav > li:nth-of-type(1)
+    {
+        left: 0;
+        font-size: 36px;
+    }
+
+    .partsBG .header_fig .header_fig_nav > li:nth-of-type(2)
+    {
+        right: 0;
+        font-size: 36px;
+    }
+
+    
+}
+
+/* Content */
+@media all and (min-width: 720px)
+{
+    .partsBG .content
+    {
+        position: relative;
+        width: 100%;
+        margin-top: 91px;
+    }
+
+    .partsBG .content > .content_inner
+    {
+        position: relative;
+        width: 800px;
+        margin: 0 auto;
+    }
+
+    .partsBG .content .content_inner_text
+    {
+        padding-left: 400px;
+        font-size: 12px;
+        line-height: 2.5;
+    }
+
+    .partsBG .content .content_inner_text > p:nth-of-type(n+2)
+    {
+        margin-top: 2em;
+    }
+
+    .partsBG .content .content_inner_fig
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 400px;
+        height: 100%;
+    }
+
+    .partsBG .content .content_inner_fig > figure.fig_pic
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .partsBG .content .content_inner_fig > figure.fig_pic > img
+    {
+        object-fit: cover;
+        height: 500px;
+        width: 350px;
+    }
+}
+
+/* Footer */
+@media all and (min-width: 720px)
+{
+    .partsBG footer
+    {
+        position: relative;
+        width: 100%;
+        margin-top: 100px;
+    }
+
+    .partsBG footer > .footer_inner
+    {
+        position: relative;
+        width: 800px;
+        padding: 100px 0;
+        margin: 0 auto;
+        border-top: #ddd solid 1px;
+    }
+
+    .partsBG footer .footer_navBar
+    {
+        position: relative;
+        height: auto;
+        width: 100%;
+    }
+
+    .partsBG footer .footer_navBar > .footBarList
+    {
+        position: absolute;
+        text-align: center;
+        transform: translateX(60%);
+    }
+
+    .partsBG footer .footer_navBar > .footBarList > li:nth-of-type(n+2)
+    {
+        margin-left: 30px;
+    }
+
+    .partsBG footer .footer_navBar > .footBarList > li
+    {
+        display: inline-block;
+        position: relative;
+        pointer-events: auto;
+    }
+
+    /* .partsBG footer .footer_navBar > .footBarList > li a
+    {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 8px;
+        width: 8px;
+        margin-top: -25px;
+        transform: translateX(-50%);
+    } */
+}

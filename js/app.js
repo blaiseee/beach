@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', (e) =>
 		body.classList.add('background-start')
 		buttons[0].classList.add('open')
 		lists[0].classList.add('active')
-	}, 10000); //5000
+	}, 5000); //5000
 })
 
 var app = function ()
